@@ -1,0 +1,1 @@
+if("function"!=typeof define)var define=require("amdefine")(module);define(function(require){"use strict";var Router="function"==typeof require?require("router"):window.Router,APP={};return APP.launch=function(options){_.templateSettings={evaluate:/\{\%(.+?)\%\}/g,interpolate:/\{\{(.+?)\}\}/g},this.route=new Router,Backbone.history.start()},APP});

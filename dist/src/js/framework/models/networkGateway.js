@@ -1,0 +1,1 @@
+if("function"!=typeof define)var define=require("amdefine")(module);define(function(require){"use strict";var NetworkGateway=Backbone.Model.extend({url:void 0,initialize:function(){}});return NetworkGateway});

@@ -1,0 +1,1 @@
+if("function"!=typeof define)var define=require("amdefine")(module);define(function(require){"use strict";var GalleryEvents={},EventListener=_.extend({},Backbone.Events),EventCallout={HANDLER:"ONCLICK"};return EventListener.on("ONCLICK",function(evt){console.log("ONCLICK")}),GalleryEvents.EventListener=EventListener,GalleryEvents.EventCallout=EventCallout,GalleryEvents});
