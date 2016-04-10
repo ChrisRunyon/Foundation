@@ -10,7 +10,7 @@ BackboneJS w/ Foundation
   * Run gulp to minify and create dist folder
 
 #### Routes:
-``` html
+``` javascript
 	var Router = Backbone.Router.extend({
         routes: {
             '#': '',
@@ -18,7 +18,7 @@ BackboneJS w/ Foundation
         },
 ```
 #### Model Fetch:
-``` html
+``` javascript
 	var NetworkGateway = Backbone.Model.extend({
         url: undefined,
         initialize: function () {}
@@ -30,7 +30,7 @@ BackboneJS w/ Foundation
     });
 ```
 #### Events:
-``` html
+``` javascript
 	var EventListener = _.extend({}, Backbone.Events);
 
 	 EventListener.on('ONCLICK', function (evt) {
@@ -38,7 +38,7 @@ BackboneJS w/ Foundation
     });
 ```
 #### Grid: 
-``` html
+``` javascript
 	createGridContainer: function (data) {
         var options = {
             data: data.result,
@@ -50,14 +50,14 @@ BackboneJS w/ Foundation
     },
 ``` 
 #### HTML templates:
-``` html
+``` javascript
 	$.get('js/templates/modules/containers/header.html', function(data) {
         var temp = Handlebars.compile(data);
         self.template = $('.' + self.className).html(temp).foundation();
     });
 ```
 #### Config:
-``` html
+``` javascript
 	requireConfig({basePath: 'js'});
         require(['require',
         'jquery',
