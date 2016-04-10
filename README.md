@@ -9,16 +9,16 @@ BackboneJS w/ Foundation
   * To get latest node packages Run npm update
   * Run gulp to minify and create dist folder
 
-#### Routes
-
+#### Routes:
+``` html
 	var Router = Backbone.Router.extend({
         routes: {
             '#': '',
             '': 'index'
         },
-
-#### Model Fetch
-
+```
+#### Model Fetch:
+``` html
 	var NetworkGateway = Backbone.Model.extend({
         url: undefined,
         initialize: function () {}
@@ -28,17 +28,17 @@ BackboneJS w/ Foundation
     $.when(NetworkGateway.fetch()).then(function (responseText) {
         self.create(responseText);
     });
-
-#### Events
-
+```
+#### Events:
+``` html
 	var EventListener = _.extend({}, Backbone.Events);
 
 	 EventListener.on('ONCLICK', function (evt) {
         this.trigger(EventRegister.EVENT_NAME, evt);
     });
-
-#### Grid 
-
+```
+#### Grid: 
+``` html
 	createGridContainer: function (data) {
         var options = {
             data: data.result,
@@ -48,16 +48,16 @@ BackboneJS w/ Foundation
         var container = this.$el.find(".galleryContainer");
         container.append(this.gridcontainer.render().el);
     },
-
-#### HTML templates
-
+``` 
+#### HTML templates:
+``` html
 	$.get('js/templates/modules/containers/header.html', function(data) {
         var temp = Handlebars.compile(data);
         self.template = $('.' + self.className).html(temp).foundation();
     });
-
-#### Config
-
+```
+#### Config:
+``` html
 	requireConfig({basePath: 'js'});
         require(['require',
         'jquery',
@@ -74,7 +74,7 @@ BackboneJS w/ Foundation
         window.Handlebars = Handlebars;
         APP.launch();
     });
-
+```
   
 #### Example:
   [http://modernjs.aplacefor3d.com] (http://modernjs.aplacefor3d.com)
