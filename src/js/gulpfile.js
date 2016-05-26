@@ -7,6 +7,8 @@ var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var htmlmin = require('gulp-htmlmin');
 var compressor = require('gulp-compressor');
+var mochaPhantomJS = require('gulp-mocha-phantomjs');
+var mocha = require('gulp-mocha');
 
 var PATHS = {
     html: [
@@ -61,6 +63,10 @@ var PATHS = {
     ],
     images: [
         '../../src/images/*.jpg'
+    ],
+    test: [
+        'apps/index/test/*.html',
+        'apps/details/test/*.html'
     ]
 };
 
@@ -68,6 +74,24 @@ var PATHS = {
 // This happens every time a build starts
 gulp.task('clean', function(done) {
     rimraf('../../dist', done);
+});
+
+gulp.task('test', function () {
+    return gulp
+    .src(PATHS.test, {"base":"."})
+    .pipe(mochaPhantomJS({
+        reporter: 'tap',
+        mocha: {
+            grep: 'pattern'
+        },
+        phantomjs: {
+            viewportSize: {
+                width: 1024,
+                height: 768
+            },
+            useColors:true
+        }
+    }));
 });
 
 gulp.task('minscripts', function() {
@@ -115,5 +139,5 @@ gulp.task('config', function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('default', function(done) {
-    sequence('clean', 'minscripts', 'minhtml', 'minjson', 'copyimages', 'mincss', 'cpindex', 'config', done);
+    sequence('clean', 'test', 'minscripts', 'minhtml', 'minjson', 'copyimages', 'mincss', 'cpindex', 'config', done);
 });
