@@ -81,9 +81,6 @@ gulp.task('test', function () {
     .src(PATHS.test, {"base":"."})
     .pipe(mochaPhantomJS({
         reporter: 'tap',
-        mocha: {
-            grep: 'pattern'
-        },
         phantomjs: {
             viewportSize: {
                 width: 1024,
