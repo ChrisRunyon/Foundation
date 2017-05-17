@@ -5,6 +5,11 @@ define(function (require) {
     var NetworkGateway = (typeof require === 'function') ? require('framework/models/networkGateway') : window.NetworkGateway,
         List           = (typeof require === 'function') ? require('framework/modules/list/list')     : window.List;
 
+    /**
+    *
+    * Application Details Page
+    *
+    */    
     var DetailsPage = Backbone.View.extend({
         tagName: "div",
         className: "pagewrapper",

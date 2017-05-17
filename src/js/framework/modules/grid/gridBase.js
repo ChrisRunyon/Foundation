@@ -2,10 +2,15 @@ if (typeof define !== 'function') {var define = require('amdefine')(module); }
 define(function (require) {
     'use strict';
 
-    var UI           = (typeof require === 'function') ? require('jquery-ui')                                  : window.UI,
+    var UI            = (typeof require === 'function') ? require('jquery-ui')                                 : window.UI,
         GridPage      = (typeof require === 'function') ? require('framework/modules/grid/gridPage')           : window.GridPage,
         GridButton    = (typeof require === 'function') ? require('framework/modules/grid/gridButton')         : window.GridButton;
 
+    /**
+    *
+    * Default Grid 
+    *
+    */
     var GridBase = Backbone.View.extend({
         tagName: "div",
         className: "gridwrapper",

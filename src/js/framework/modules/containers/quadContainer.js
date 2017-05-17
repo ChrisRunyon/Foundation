@@ -3,6 +3,8 @@ define(function (require) {
     'use strict';
 
     /*
+    *   Layout for quad sections
+    *
     *   Quad section container: 
     *       top = header
     *       left = left column 

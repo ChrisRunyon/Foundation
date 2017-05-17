@@ -3,9 +3,14 @@ define(function (require) {
     'use strict';
 
     var appview = null;
-    var IndexView = require('views/indexView');
-    var DetailView = require('views/detailView');
+    var IndexView = require('apps/index/indexPage');
+    //var DetailView = require('apps/details/detailPage');
 
+    /**
+    *
+    * Controller for routing functions
+    *
+    */
     var Router = Backbone.Router.extend({
         routes: {
             '#': '',
@@ -23,11 +28,11 @@ define(function (require) {
             this.appview = new IndexView();
             $("#content").html(this.appview.render().el);
         },
-        gotoDetails: function () {
+        /*gotoDetails: function () {
            
             this.appview = new DetailView();
             $("#content").html(this.appview.render().el);
-        }
+        }*/
 
 	});
     return Router;

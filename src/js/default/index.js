@@ -6,6 +6,11 @@ define(function (require) {
 
     var APP = {};
 
+    /**
+    * 
+    * Config option for Application startup
+    *
+    */
     APP.launch = function (options) {
 
         _.templateSettings = { evaluate: /\{\%(.+?)\%\}/g,

@@ -10,10 +10,9 @@ var compressor = require('gulp-compressor');
 var mochaPhantomJS = require('gulp-mocha-phantomjs');
 var mocha = require('gulp-mocha');
 
+// Define wildcard folder pathnames
 var PATHS = {
     html: [
-        'apps/index/**/*.html',
-        'apps/details/**/*.html',
         'controller/**/*.html',
         'default/**/*.html',
         'framework/events/**/*.html',
@@ -23,12 +22,12 @@ var PATHS = {
         'framework/modules/list/**/*.html',
         'framework/modules/topbar/**/*.html',
         'libraries/**/*.html',
-        'templates/modules/containers/**/*.html',
-        'templates/modules/grid/**/*.html',
-        'templates/modules/list/**/*.html',
-        'templates/modules/topbar/**/*.html',
-        'templates/views/**/*.html',
-        'views/**/*.html',
+        //'templates/modules/containers/**/*.html',
+        //'templates/modules/grid/**/*.html',
+        //'templates/modules/list/**/*.html',
+        //'templates/modules/topbar/**/*.html',
+        //'templates/views/**/*.html',
+        //'views/**/*.html'
     ],
     js: [
         'apps/index/**/*.js',
@@ -53,7 +52,7 @@ var PATHS = {
         '../../src/css/**/*.css'
     ],
     index: [
-        '../../src/index.html',
+        '../../src/index.html'
     ],
     config: [
         '../../src/config/requirejs.config.js'

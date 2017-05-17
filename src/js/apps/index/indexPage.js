@@ -5,6 +5,11 @@ define(function (require) {
     var NetworkGateway = (typeof require === 'function') ? require('framework/models/networkGateway') : window.NetworkGateway,
         GridBase       = (typeof require === 'function') ? require('framework/modules/grid/gridBase') : window.GridBase;
 
+    /**
+    *
+    *  Default Application Index Page
+    *
+    */
     var IndexPage = Backbone.View.extend({
         tagName: "div",
         className: "pagewrapper",

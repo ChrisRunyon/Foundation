@@ -4,6 +4,11 @@ define(function (require) {
 
     var EventRegister = (typeof require === 'function') ? require('framework/events/eventRegister') : window.EventRegister;
 
+    /**
+    * 
+    * Default Header 
+    *
+    */
     var Header = Backbone.View.extend({
         tagName: 'div',
         className: 'headerwrapper',

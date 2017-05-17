@@ -5,6 +5,11 @@ define(function (require) {
     var ListItem      = (typeof require === 'function') ? require('framework/modules/list/listItem') : window.ListItem,
         EventRegister = (typeof require === 'function') ? require('framework/events/eventRegister') : window.EventRegister;
 
+    /**
+    *
+    * Default List Container
+    *
+    */
     var List = Backbone.View.extend({
         tagName: "div",
         className: "listContainer",
@@ -17,7 +22,6 @@ define(function (require) {
         },
 
         addItem: function(data) {
-            //console.log(data);
             var self = this,
                 listItem = null,
                 thisItem = null;

@@ -1,13 +1,45 @@
-# Foundation
-BackboneJS w/ Foundation
+# BackboneJS & Zurb Foundation
+BackboneJS w/ Zurb Foundation 5.0
 
 #### Dependencies:
-  * nodejs
-  * gulp
+  * nodeJS
+  * gulpJS
+  * requireJS
+  * backboneJS
+  * jQuery
+  * underScoreJS
+  * handleBarsJS
+  * mochaPhantomJS
+  * mocha (Behavior Driven Development)
+  * Zurb Foundation 5.0
   
 #### Usage:
-  * To get latest node packages Run npm update
-  * Run gulp to minify and create dist folder
+  Clone Repo
+
+  * ``` git clone https://github.com/ChrisRunyon/Foundation.git ```
+  * ``` cd Foundation ```
+
+  Terminal commands
+  
+  * ``` npm update ```
+  
+  Run gulpfile.js located in src/js/
+  
+  * ``` gulp ```
+  
+  Output to /dist folder
+  
+#### Test Output:
+	1..1
+	ok 1 indexPage should return -1 when the value is not present
+	tests 1
+	pass 1
+	fail 0
+	1..1
+	ok 1 detailsPage should return -1 when the value is not present
+	tests 1
+	pass 1
+	fail 0
 
 #### Routes:
 ``` javascript
@@ -72,6 +104,8 @@ BackboneJS w/ Foundation
         window.Backbone = Backbone;
         window._ = _;
         window.Handlebars = Handlebars;
-        APP.launch();
+        $(window).ready(function() {
+            APP.launch();
+        });
     });
 ```
